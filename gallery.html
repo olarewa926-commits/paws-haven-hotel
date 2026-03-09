@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paws Haven Hotel — معرض الصور</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:0 auto}
+.gi{border-radius:16px;overflow:hidden;cursor:pointer;position:relative;background:var(--sand2)}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.gi:hover img{transform:scale(1.06)}
+.gi:nth-child(1){grid-column:1/3;grid-row:1/3}
+.gi:nth-child(6){grid-column:3/5;grid-row:3/5}
+.gi:nth-child(1) img{height:100%}
+.gi:nth-child(6) img{height:100%}
+.gi img{height:180px}
+.go{position:absolute;inset:0;background:rgba(44,36,32,0);transition:background .3s;display:flex;align-items:flex-end;justify-content:flex-start;padding:.7rem}
+.gi:hover .go{background:rgba(44,36,32,0.25)}
+.gz{color:white;font-size:1.8rem;opacity:0;transition:opacity .3s;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.gi:hover .gz{opacity:1}
+.gcap{position:absolute;bottom:0;right:0;left:0;background:linear-gradient(transparent,rgba(44,36,32,.7));color:white;padding:1.2rem .8rem .5rem;font-size:.78rem;font-weight:600;opacity:0;transition:opacity .3s}
+.gi:hover .gcap{opacity:1}
+.lb{position:fixed;inset:0;z-index:9999;background:rgba(44,36,32,0.93);display:none;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+.lb.open{display:flex}
+.lb img{max-width:88vw;max-height:86vh;border-radius:16px;object-fit:contain}
+.lbc{position:absolute;top:1.5rem;left:1.5rem;width:44px;height:44px;background:rgba(255,255,255,0.16);border:none;border-radius:50%;color:white;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+@media(max-width:880px){.gal-grid{grid-template-columns:1fr 1fr}.gi:nth-child(1),.gi:nth-child(6){grid-column:auto;grid-row:auto}.gi img{height:160px}}
+</style>
+</head>
+<body>
+<div class="blobs"><div class="blob1"></div><div class="blob2"></div></div>
+<nav id="nav">
+  <a href="../index.html" class="logo"><div class="logo-icon">🐾</div><div><div class="logo-en">Paws Haven Hotel</div><span class="logo-ar">فندق الكلاب الفاخر</span></div></a>
+  <ul>
+    <li><a href="../index.html">الرئيسية</a></li>
+    <li><a href="facilities.html">المرافق</a></li>
+    <li><a href="services.html">خدماتنا</a></li>
+    <li><a href="gallery.html" class="active">معرض الصور</a></li>
+    <li><a href="packages.html">الحزم</a></li>
+    <li><a href="about.html">من نحن</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="booking.html" class="nav-book">احجز الآن</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <span class="ph-tag">✦ معرضنا</span>
+  <div class="ph-title">Photo Gallery</div>
+  <div class="ph-ar">لحظات من فندقنا</div>
+  <div class="ph-line"></div>
+  <div class="breadcrumb"><a href="../index.html">الرئيسية</a> <span>/</span> <span>معرض الصور</span></div>
+</div>
+
+<section style="background:var(--sand)">
+  <div class="gal-grid">
+    <div class="gi reveal" onclick="openLb('../assets/images/hero.jpg','كلب سعيد في الحديقة')">
+      <img src="../assets/images/hero.jpg" alt="كلب سعيد في الحديقة"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">كلب سعيد في الحديقة 🌿</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-rest.jpg','وقت الراحة')">
+      <img src="../assets/images/dog-rest.jpg" alt="وقت الراحة"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">وقت الراحة والاسترخاء 🛏️</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/hotel-interior.jpg','داخل الفندق')">
+      <img src="../assets/images/hotel-interior.jpg" alt="داخل الفندق"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">الغرف الفاخرة 🌟</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-bath.jpg','صالون التجميل')">
+      <img src="../assets/images/dog-bath.jpg" alt="صالون التجميل"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">صالون التجميل ✨</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-vet.jpg','الرعاية البيطرية')">
+      <img src="../assets/images/dog-vet.jpg" alt="الرعاية البيطرية"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">رعاية بيطرية متخصصة 🏥</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-play.jpg','اللعب في الحديقة')">
+      <img src="../assets/images/dog-play.jpg" alt="اللعب في الحديقة"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">الحديقة الخارجية 🌿</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-feeding.jpg','وجبات صحية')">
+      <img src="../assets/images/dog-feeding.jpg" alt="وجبات صحية"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">وجبات صحية يومية 🍽️</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dogs-entrance.jpg','مدخل الفندق')">
+      <img src="../assets/images/dogs-entrance.jpg" alt="مدخل الفندق"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">واجهة الفندق 🏨</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-sleep.jpg','وقت النوم')">
+      <img src="../assets/images/dog-sleep.jpg" alt="وقت النوم"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">نوم هانئ 😴</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-trainer.jpg','جلسة التدريب')">
+      <img src="../assets/images/dog-trainer.jpg" alt="جلسة التدريب"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">جلسة التدريب 🎓</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-groomed.jpg','كلب مجمّل')">
+      <img src="../assets/images/dog-groomed.jpg" alt="كلب مجمّل"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">بعد التجميل ✂️</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-happy.jpg','كلب سعيد')">
+      <img src="../assets/images/dog-happy.jpg" alt="كلب سعيد"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">يوم مشمس سعيد ☀️</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-run.jpg','يركض بحرية')">
+      <img src="../assets/images/dog-run.jpg" alt="يركض بحرية"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">يركض بحرية 🏃</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-outside.jpg','خارج الفندق')">
+      <img src="../assets/images/dog-outside.jpg" alt="خارج الفندق"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">الحديقة الخضراء 🌱</div>
+    </div>
+    <div class="gi reveal" onclick="openLb('../assets/images/dog-training.jpg','تدريب الكلاب')">
+      <img src="../assets/images/dog-training.jpg" alt="تدريب الكلاب"/>
+      <div class="go"><span class="gz">🔍</span></div>
+      <div class="gcap">تدريب احترافي 🏆</div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb">
+  <button class="lbc" onclick="closeLb()" aria-label="إغلاق">✕</button>
+  <button class="lb-arrow lb-prev" onclick="lbNext()" aria-label="التالي">&#8249;</button>
+  <img id="lbi" src="" alt="" loading="lazy"/>
+  <div id="lb-caption"></div>
+  <button class="lb-arrow lb-next" onclick="lbPrev()" aria-label="السابق">&#8250;</button>
+</div>
+
+<footer>
+  <div class="foot-logo">Paws Haven Hotel 🐾</div>
+  <p class="foot-copy">© 2025 <span>Paws Haven Hotel</span></p>
+  <ul class="foot-links"><li><a href="../index.html">الرئيسية</a></li><li><a href="packages.html">الحزم</a></li><li><a href="booking.html">الحجز</a></li><li><a href="contact.html">تواصل معنا</a></li><li><a href="sitemap.html">خريطة الموقع</a></li></ul>
+</footer>
+
+<script src="../assets/main.js"></script>
+</body></html>

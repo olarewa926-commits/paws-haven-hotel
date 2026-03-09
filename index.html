@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paws Haven Hotel — الرئيسية</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="blobs"><div class="blob1"></div><div class="blob2"></div></div>
+
+<nav id="nav">
+  <a href="index.html" class="logo">
+    <div class="logo-icon">🐾</div>
+    <div><div class="logo-en">Paws Haven Hotel</div><span class="logo-ar">فندق الكلاب الفاخر</span></div>
+  </a>
+  <ul>
+    <li><a href="index.html" class="active">الرئيسية</a></li>
+    <li><a href="pages/facilities.html">المرافق</a></li>
+    <li><a href="pages/services.html">خدماتنا</a></li>
+    <li><a href="pages/gallery.html">معرض الصور</a></li>
+    <li><a href="pages/packages.html">الحزم</a></li>
+    <li><a href="pages/about.html">من نحن</a></li>
+    <li><a href="pages/contact.html">تواصل معنا</a></li>
+    <li><a href="pages/booking.html" class="nav-book">احجز الآن</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" style="position:relative;height:100vh;min-height:580px;display:flex;align-items:center;overflow:hidden;padding:0">
+  <div style="position:absolute;inset:0;z-index:0">
+    <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;object-position:center">
+      <source src="assets/videos/hero-bg.mp4" type="video/mp4"/>
+      <img src="assets/images/hero.jpg" alt="Paws Haven Hero" style="width:100%;height:100%;object-fit:cover"/>
+    </video>
+  </div>
+  <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(115deg,rgba(44,36,32,.68) 0%,rgba(44,36,32,.34) 55%,rgba(123,173,168,.1) 100%)"></div>
+  <div style="position:relative;z-index:2;padding:0 5rem;max-width:620px;animation:fu .9s ease both">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.32);backdrop-filter:blur(8px);border-radius:50px;padding:7px 18px;color:white;font-size:.74rem;font-weight:600;letter-spacing:1.5px;margin-bottom:1.6rem">
+      <span style="width:7px;height:7px;background:var(--teal2);border-radius:50%;animation:pk 2s infinite"></span>
+      الرعاية الأولى في المنطقة
+    </div>
+    <div style="font-family:'Italiana',serif;font-size:clamp(2.8rem,5vw,4.6rem);color:white;line-height:1.1;margin-bottom:.5rem;text-shadow:0 2px 16px rgba(0,0,0,.2)">Paws Haven<br>Hotel</div>
+    <div style="font-size:1.15rem;color:rgba(255,255,255,.9);font-weight:700;margin-bottom:1rem">حيث يشعر كلبك بالمنزل 🐶</div>
+    <p style="font-size:.93rem;color:rgba(255,255,255,.7);line-height:1.95;margin-bottom:2.3rem;max-width:440px">نقدم لأحبائك بيئة آمنة ودافئة مع أعلى مستويات الرعاية والاهتمام — لأن كل كلب يستحق الأفضل.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+      <a href="pages/booking.html" class="btn-teal">احجز الآن</a>
+      <a href="pages/packages.html" class="btn-ghost">استعرض الحزم</a>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.38);font-size:.65rem;letter-spacing:2px;animation:bb 2.5s ease-in-out infinite">
+    <div style="width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.42),transparent)"></div>
+    اكتشف
+  </div>
+</section>
+
+<style>
+@keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pk{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.6)}}
+@keyframes bb{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(9px)}}
+</style>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-item"><span class="stat-num" data-count="800" data-prefix="+">+800</span><span class="stat-lbl">كلب سعيد</span></div>
+  <div class="stat-item"><span class="stat-num" data-count="12">12</span><span class="stat-lbl">سنة خبرة</span></div>
+  <div class="stat-item"><span class="stat-num">24/7</span><span class="stat-lbl">إشراف مستمر</span></div>
+  <div class="stat-item"><span class="stat-num" data-count="4" data-suffix=".9★">4.9★</span><span class="stat-lbl">تقييم العملاء</span></div>
+</div>
+
+<!-- QUICK LINKS -->
+<section style="background:var(--sand)">
+  <div style="max-width:1080px;margin:0 auto">
+    <div class="sec-head reveal">
+      <span class="sec-tag">✦ اكتشف فندقنا</span>
+      <div class="sec-title">Everything Your Dog Needs</div>
+      <div class="sec-ar">كل شي يحتاجه كلبك في مكان واحد</div>
+      <div class="sec-line c"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem">
+      <a href="pages/facilities.html" style="text-decoration:none;background:white;border-radius:20px;padding:2rem 1.5rem;text-align:center;box-shadow:0 4px 16px rgba(44,36,32,.06);transition:transform .3s,box-shadow .3s;display:block" class="reveal" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 14px 32px rgba(44,36,32,.1)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 16px rgba(44,36,32,.06)'">
+        <div style="font-size:2.5rem;margin-bottom:.8rem">🏨</div>
+        <div style="font-weight:700;color:var(--dark);margin-bottom:.4rem">المرافق</div>
+        <div style="font-size:.83rem;color:var(--soft)">غرف فاخرة وحدائق خضراء</div>
+      </a>
+      <a href="pages/services.html" style="text-decoration:none;background:white;border-radius:20px;padding:2rem 1.5rem;text-align:center;box-shadow:0 4px 16px rgba(44,36,32,.06);transition:transform .3s,box-shadow .3s;display:block" class="reveal" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 14px 32px rgba(44,36,32,.1)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 16px rgba(44,36,32,.06)'">
+        <div style="font-size:2.5rem;margin-bottom:.8rem">🛁</div>
+        <div style="font-weight:700;color:var(--dark);margin-bottom:.4rem">خدماتنا</div>
+        <div style="font-size:.83rem;color:var(--soft)">تجميل ولعب ورعاية بيطرية</div>
+      </a>
+      <a href="pages/gallery.html" style="text-decoration:none;background:white;border-radius:20px;padding:2rem 1.5rem;text-align:center;box-shadow:0 4px 16px rgba(44,36,32,.06);transition:transform .3s,box-shadow .3s;display:block" class="reveal" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 14px 32px rgba(44,36,32,.1)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 16px rgba(44,36,32,.06)'">
+        <div style="font-size:2.5rem;margin-bottom:.8rem">📸</div>
+        <div style="font-weight:700;color:var(--dark);margin-bottom:.4rem">معرض الصور</div>
+        <div style="font-size:.83rem;color:var(--soft)">لحظات من فندقنا</div>
+      </a>
+      <a href="pages/packages.html" style="text-decoration:none;background:white;border-radius:20px;padding:2rem 1.5rem;text-align:center;box-shadow:0 4px 16px rgba(44,36,32,.06);transition:transform .3s,box-shadow .3s;display:block" class="reveal" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 14px 32px rgba(44,36,32,.1)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 16px rgba(44,36,32,.06)'">
+        <div style="font-size:2.5rem;margin-bottom:.8rem">💎</div>
+        <div style="font-weight:700;color:var(--dark);margin-bottom:.4rem">الحزم والأسعار</div>
+        <div style="font-size:.83rem;color:var(--soft)">اختر ما يناسبك</div>
+      </a>
+      <a href="pages/about.html" style="text-decoration:none;background:white;border-radius:20px;padding:2rem 1.5rem;text-align:center;box-shadow:0 4px 16px rgba(44,36,32,.06);transition:transform .3s,box-shadow .3s;display:block" class="reveal" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 14px 32px rgba(44,36,32,.1)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 16px rgba(44,36,32,.06)'">
+        <div style="font-size:2.5rem;margin-bottom:.8rem">👥</div>
+        <div style="font-weight:700;color:var(--dark);margin-bottom:.4rem">من نحن</div>
+        <div style="font-size:.83rem;color:var(--soft)">قصتنا وفريقنا</div>
+      </a>
+      <a href="pages/contact.html" style="text-decoration:none;background:white;border-radius:20px;padding:2rem 1.5rem;text-align:center;box-shadow:0 4px 16px rgba(44,36,32,.06);transition:transform .3s,box-shadow .3s;display:block" class="reveal" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 14px 32px rgba(44,36,32,.1)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 16px rgba(44,36,32,.06)'">
+        <div style="font-size:2.5rem;margin-bottom:.8rem">📍</div>
+        <div style="font-weight:700;color:var(--dark);margin-bottom:.4rem">تواصل معنا</div>
+        <div style="font-size:.83rem;color:var(--soft)">موقعنا وبياناتنا</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-logo">Paws Haven Hotel 🐾</div>
+  <p class="foot-copy">© 2025 <span>Paws Haven Hotel</span> — جميع الحقوق محفوظة</p>
+  <ul class="foot-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="pages/packages.html">الحزم</a></li>
+    <li><a href="pages/booking.html">الحجز</a></li>
+    <li><a href="pages/contact.html">تواصل معنا</a></li>
+  </ul>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script src="assets/main.js"></script>
+</body></html>
